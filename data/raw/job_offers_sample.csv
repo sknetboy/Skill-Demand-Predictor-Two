@@ -1,0 +1,9 @@
+offer_id,title,description,industry,published_at,company,location
+1,Data Scientist,"Python SQL machine learning pandas communication",Technology,2025-01-15,Acme,Remote
+2,ML Engineer,"Python TensorFlow AWS Docker teamwork",Technology,2025-02-20,Globex,Madrid
+3,BI Analyst,"SQL Power BI Excel communication english",Consulting,2025-03-05,Initech,Barcelona
+4,Data Analyst,"Python SQL Tableau problem solving",Finance,2025-04-10,Umbrella,Remote
+5,AI Product Manager,"Machine learning leadership communication english",Technology,2025-05-22,Wonka,London
+6,Cloud Data Engineer,"Python SQL AWS Docker Kubernetes",Technology,2025-06-11,Stark,New York
+7,Analytics Lead,"Tableau Power BI leadership teamwork spanish",Retail,2025-07-03,Wayne,Mexico City
+8,NLP Engineer,"Python scikit-learn TensorFlow english adaptability",Technology,2025-08-17,Oscorp,Remote
