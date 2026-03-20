@@ -1,2 +1,15 @@
 __pycache__/
 *.pyc
+.venv/
+venv/
+.env
+*.db
+.vscode/
+.idea/
+*.log
+data/processed/
+node_modules/
+dist/
+build/
+.streamlit/
+! .streamlit/config.toml

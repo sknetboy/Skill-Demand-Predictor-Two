@@ -36,3 +36,23 @@ def detect_emerging(payload: EmergingSkillsRequest) -> dict:
 @app.get("/api/v1/dashboard/summary")
 def dashboard_summary(source: str = "data/raw/job_offers_sample.csv", period: str = "monthly") -> dict:
     return controller.dashboard_summary(source, period)
+
+
+@app.get("/api/v1/academic/recommendations")
+def get_academic_recommendations(source: str = "data/raw/job_offers_sample.csv", period: str = "monthly") -> dict:
+    return controller.academic_recommendations(source, period)
+
+
+@app.get("/api/v1/academic/gap-analysis")
+def get_gap_analysis(source: str = "data/raw/job_offers_sample.csv", period: str = "monthly") -> dict:
+    return controller.gap_analysis(source, period)
+
+
+@app.post("/api/v1/academic/simulate")
+def simulate_syllabus(payload: dict) -> dict:
+    # Payload: {"source": str, "period": str, "added_skills": list[str]}
+    return controller.simulate_syllabus(
+        payload.get("source", "data/raw/job_offers_sample.csv"),
+        payload.get("period", "monthly"),
+        payload.get("added_skills", [])
+    )

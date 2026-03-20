@@ -42,7 +42,12 @@ class JobOfferETL:
         return clean_rows
 
     def to_entities(self, rows: list[dict]) -> list[JobOffer]:
-        return [JobOffer(**record) for record in rows]
+        entities = []
+        for record in rows:
+            # Filter record to only include fields accepted by JobOffer
+            valid_fields = {k: v for k, v in record.items() if k in JobOffer.__dataclass_fields__}
+            entities.append(JobOffer(**valid_fields))
+        return entities
 
     def export_records(self, records: list[dict], output_path: str) -> None:
         path = Path(output_path)

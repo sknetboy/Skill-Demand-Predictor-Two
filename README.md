@@ -1,43 +1,42 @@
-# Skill Demand Predictor
+# Skill Demand Predictor & Academic Planner 🎓📈
 
-Sistema modular para predecir demanda futura de habilidades laborales aplicando Hexagonal Architecture, SOLID, Clean Architecture y prácticas de Data Science/MLOps.
+[![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-blue?logo=github)](https://github.com/sknetboy/Skill-Demand-Predictor-Two)
 
-## Capacidades incluidas
-- Ingesta y normalización de vacantes desde CSV/JSON.
-- Extracción de habilidades técnicas, blandas, herramientas e idiomas.
-- Análisis temporal por periodos mensuales o trimestrales.
-- Detección de habilidades emergentes mediante crecimiento acelerado.
-- Predicción de demanda con modelos intercambiables a través de puertos.
-- API REST con FastAPI y documentación Swagger automática.
-- Exportación de resultados en JSON/CSV y artefactos para dashboard.
+Sistema modular para predecir la demanda futura de habilidades laborales y optimizar planes académicos (Syllabus), aplicando Arquitectura Hexagonal, SOLID, Clean Architecture y Data Science.
 
-## Arquitectura
-- `domain/`: entidades, value objects y servicios puros.
-- `application/`: casos de uso y puertos de entrada/salida.
-- `infrastructure/`: adaptadores para ETL, NLP, ML, repositorios y persistencia.
-- `interfaces/`: API REST, DTOs y controladores.
-- `frontend/react-dashboard/`: especificación inicial para dashboard React.
+## 🚀 Capacidades Principales
+- **Análisis de Mercado**: Ingesta y normalización de vacantes desde CSV/JSON.
+- **Extracción de Skills**: Identificación de habilidades técnicas, blandas e idiomas mediante NLP.
+- **Predicción con ML**: Pronóstico de demanda futura usando Random Forest y Medias Móviles.
+- **Planeación Académica Estratégica**:
+  - **Gap Analysis**: Compara el currículo actual con la demanda real del mercado.
+  - **Simulador de Syllabus**: Mide el impacto de añadir nuevas habilidades antes de implementarlas.
+  - **Informes de Justificación**: Generación y descarga de reportes automáticos para directores académicos.
+- **Dashboard Interactivo**: Interfaz visual completa desarrollada en Streamlit con gráficos de Plotly.
 
-## Ejecución rápida
-```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install -e .[dev]
-uvicorn interfaces.api.main:app --reload
-```
+## 🛠️ Arquitectura
+- `domain/`: Entidades, value objects y lógica de negocio pura.
+- `application/`: Casos de uso y puertos de entrada/salida.
+- `infrastructure/`: Adaptadores para PostgreSQL, ETL, NLP y modelos de ML.
+- `interfaces/`: API REST (FastAPI), DTOs y controladores.
+- `frontend/`: Dashboard interactivo de Streamlit.
 
-## CLI de entrenamiento
-```bash
-python main.py train --input data/raw/job_offers_sample.csv --period monthly
-```
+## 📥 Instalación Rápida
+1. Crear entorno virtual: `python -m venv venv`
+2. Activar entorno: `.\venv\Scripts\activate` (Windows)
+3. Instalar dependencias: `pip install -r requirements.txt` (o `pip install .`)
+4. Configurar `.env` con tus credenciales de PostgreSQL.
 
-## Endpoints principales
-- `POST /api/v1/skills/extract`
-- `POST /api/v1/trends/analyze`
-- `POST /api/v1/demand/predict`
-- `POST /api/v1/skills/emerging`
-- `GET /api/v1/dashboard/summary`
+## 🚦 Ejecución
+- **Servidor API (Backend)**:
+  ```bash
+  uvicorn interfaces.api.main:app --reload
+  ```
+- **Dashboard (Frontend)**:
+  ```bash
+  streamlit run frontend/streamlit_app.py
+  ```
 
-## Documentación adicional
-- `docs/technical_design.md`
-- `docs/ml_pipeline.md`
+## 📚 Documentación Adicional
+- [docs.md](docs.md): Documentación técnica detallada de los pasos implementados.
+- [README_GUIA_RAPIDA.md](README_GUIA_RAPIDA.md): Guía simplificada para no programadores.
