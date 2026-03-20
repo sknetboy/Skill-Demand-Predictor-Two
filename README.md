@@ -14,7 +14,23 @@ Sistema modular para predecir la demanda futura de habilidades laborales y optim
   - **Informes de Justificación**: Generación y descarga de reportes automáticos para directores académicos.
 - **Dashboard Interactivo**: Interfaz visual completa desarrollada en Streamlit con gráficos de Plotly.
 
+## 🎯 Enfoque de MVP: Planeación Académica
+Este proyecto está orientado a resolver la necesidad de universidades, bootcamps y EdTechs de mantener sus currículos actualizados.
+
+### ¿Qué resuelve?
+Ayuda a decidir:
+- Qué cursos abrir basándose en demanda real.
+- Qué contenidos actualizar en el syllabus.
+- Qué certificaciones lanzar con respaldo de datos.
+- Identificar programas que están quedando obsoletos.
+
+### Casos de uso estratégicos
+- **Detección de tendencias**: Identificar habilidades ganando demanda (ej. Python, AWS, Docker).
+- **Justificación de cambios**: Sustentar actualizaciones de programas frente a consejos académicos con datos de vacantes reales.
+- **Optimización de oferta**: Priorizar el lanzamiento de tracks tecnológicos con mayor proyección de crecimiento.
+
 ## 🛠️ Arquitectura
+El proyecto utiliza una **Arquitectura Hexagonal** para asegurar la mantenibilidad y escalabilidad:
 - `domain/`: Entidades, value objects y lógica de negocio pura.
 - `application/`: Casos de uso y puertos de entrada/salida.
 - `infrastructure/`: Adaptadores para PostgreSQL, ETL, NLP y modelos de ML.
@@ -40,3 +56,7 @@ Sistema modular para predecir la demanda futura de habilidades laborales y optim
 ## 📚 Documentación Adicional
 - [docs.md](docs.md): Documentación técnica detallada de los pasos implementados.
 - [README_GUIA_RAPIDA.md](README_GUIA_RAPIDA.md): Guía simplificada para no programadores.
+
+## 📄 Licencia
+Este proyecto está bajo la Licencia MIT. Ver el archivo [LICENSE](LICENSE) para más detalles.
+Copyright (c) 2026 Jonathan Castillo
